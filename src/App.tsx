@@ -1,21 +1,36 @@
-import React from 'react';
+import { Outlet, useLocation } from 'react-router-dom';
 import './App.scss';
 
-interface Props {
-  onClick: () => void;
-  children: React.ReactNode;
-}
+import { useEffect } from 'react';
+import { Footer } from './components/Footer';
+import { Header } from './components/Header';
+import { CartProvider } from './store/CartStore';
+import { FavouriteProvider } from './store/FavouriteContext';
+import { ProductsProvider } from './store/ProductContext';
 
-export const Provider: React.FC<Props> = React.memo(({ onClick, children }) => (
-  <button type="button" onClick={onClick}>
-    {children}
-  </button>
-));
+export const App = () => {
+  const { pathname } = useLocation();
 
-export const App: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
+  }, [pathname]);
+
   return (
-    <div className="starter">
-      <Provider onClick={() => ({})}>TodoList</Provider>
-    </div>
+    <ProductsProvider>
+      <CartProvider>
+        <FavouriteProvider>
+          <div className="App">
+            <h1 className="visually-hidden">Product Catalog</h1>
+            <Header />
+            <main>
+              <Outlet />
+            </main>
+            <Footer />
+          </div>
+        </FavouriteProvider>
+      </CartProvider>
+    </ProductsProvider>
   );
 };
