@@ -2,6 +2,12 @@
 
 A modern React-based e-commerce application for browsing and purchasing mobile phones, tablets, and accessories.
 
+## 🌐 Live Demo
+
+**👉 [View Live Demo](https://andriana1112.github.io/phone-catalog_react/)**
+
+Experience the full application with all features including product browsing, cart functionality, and responsive design.
+
 ## 🚀 Technologies Used
 
 - **React 18** - Modern UI library for building user interfaces
@@ -34,8 +40,8 @@ A modern React-based e-commerce application for browsing and purchasing mobile p
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/react_phone-catalog.git
-cd react_phone-catalog
+git clone https://github.com/Andriana1112/phone-catalog_react.git
+cd phone-catalog_react
 ```
 
 2. Install dependencies:
@@ -93,9 +99,9 @@ src/
 
 The project is configured for automatic deployment to GitHub Pages:
 
-1. Push changes to the `master` branch
+1. Push changes to the `main` branch
 2. Run `npm run deploy`
-3. Your site will be available at `https://your-username.github.io/react_phone-catalog/`
+3. Your site will be available at `https://andriana1112.github.io/phone-catalog_react/`
 
 ## 📄 License
 
