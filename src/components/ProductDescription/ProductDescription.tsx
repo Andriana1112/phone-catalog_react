@@ -117,10 +117,10 @@ export const ProductDescription: React.FC<Props> = ({
     </ul>
   );
 
-  const baseUrl = process.env.NODE_ENV === 'production' 
-    ? 'https://andriana1112.github.io/phone-catalog_react' 
+  const baseUrl = process.env.NODE_ENV === 'production'
+    ? 'https://andriana1112.github.io/phone-catalog_react'
     : '';
-    
+
   const imageSrc = selectedProduct?.image
     ? `${baseUrl}/${selectedProduct.image}`
     : selectedImage

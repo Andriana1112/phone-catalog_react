@@ -16,7 +16,7 @@ export const Footer: React.FC = () => {
         <footer className="footer">
           <Link to="/" className="footer__logo">
             <img
-              src={getImageUrl("/img/Logo.png")}
+              src={getImageUrl('/img/Logo.png')}
               alt="Logo"
               className="footer__logo--pict"
             />
@@ -43,7 +43,10 @@ export const Footer: React.FC = () => {
               onClick={scrollToTop}
               aria-label="Back to top"
             >
-              <img src={getImageUrl("/img/arrowRight-Default.png")} alt="Back to top" />
+              <img
+                src={getImageUrl('/img/arrowRight-Default.png')}
+                alt="Back to top"
+              />
             </button>
           </div>
         </footer>

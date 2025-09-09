@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { Loader } from '../../components/Loader';
 import { ProductDescription } from '../../components/ProductDescription';
 import { RecommendedItems } from '../../components/RecommendedItems';
+import { getImageUrl } from '../../utils/getImageUrl';
 import {
   getProducts,
   getPhones,
@@ -67,7 +68,7 @@ export const ProductDetailsPage: React.FC = () => {
       <div style={{ padding: '40px', textAlign: 'center' }}>
         <h1 style={{ marginBottom: '20px' }}>Product was not found</h1>
         <img
-          src="/img/product-not-found.png"
+          src={getImageUrl('/img/product-not-found.png')}
           alt="Product not found"
           style={{ maxWidth: '400px', margin: '0 auto' }}
         />

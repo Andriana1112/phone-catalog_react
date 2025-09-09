@@ -6,6 +6,7 @@ import { Product } from '../../types/Product';
 import { Phone } from '../../types/Phone';
 import { Tablet } from '../../types/Tablet';
 import { Accessory } from '../../types/Accessory';
+import { getImageUrl } from '../../utils/getImageUrl';
 
 type DetailedProduct = Phone | Tablet | Accessory;
 type AnyProduct = Product | DetailedProduct;
@@ -86,7 +87,7 @@ export const CartPage: React.FC = () => {
         <div className="cartPage__empty">
           <h3 className="cartPage__empty__title">Your cart is empty</h3>
           <img
-            src="/img/cart-is-empty.png"
+            src={getImageUrl('/img/cart-is-empty.png')}
             alt="cart is empty"
             className="cartPage__empty__img"
           />

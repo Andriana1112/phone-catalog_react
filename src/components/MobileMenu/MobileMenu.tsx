@@ -4,12 +4,7 @@ import { useCartValues } from '../../store/CartStore';
 import { useFavouriteValues } from '../../store/FavouriteContext';
 import styles from './MobileMenu.module.scss';
 import classNames from 'classnames';
-
-// Правильні шляхи до зображень для Vite
-const logo = '/img/Logo.png';
-const deleteIcon = '/img/delete.png';
-const favouriteIcon = '/img/favourite-icon.png';
-const cartIcon = '/img/Shopping-cart.png';
+import { getImageUrl } from '../../utils/getImageUrl';
 
 type Props = {
   isOpenMenu: boolean;
@@ -52,14 +47,14 @@ export const MobileMenu: React.FC<Props> = ({
     <div className={styles.mobileMenu}>
       <header className={styles.MobileMenu__header}>
         <div className={styles.headerMenu__logo}>
-          <img src={logo} alt="Logo" className={styles.headerMenu__logo_pict} />
+          <img src={getImageUrl('/img/Logo.png')} alt="Logo" className={styles.headerMenu__logo_pict} />
         </div>
         <div className={styles.headerMenu__button}>
           <button
             className={styles.headerMenu__button_icon}
             onClick={handleCloseMenu}
           >
-            <img src={deleteIcon} alt="icon close" className={styles.icon} />
+            <img src={getImageUrl('/img/delete.png')} alt="icon close" className={styles.icon} />
           </button>
         </div>
       </header>
@@ -98,7 +93,7 @@ export const MobileMenu: React.FC<Props> = ({
             data-count={favouritesCount !== 0 ? `${favouritesCount}` : ''}
           >
             <img
-              src={favouriteIcon}
+              src={getImageUrl('/img/favourite-icon.png')}
               alt="favourite icon"
               className={styles.icon}
             />
@@ -117,7 +112,7 @@ export const MobileMenu: React.FC<Props> = ({
             className="icon-badge-wrapper"
             data-count={cartCount !== 0 ? `${cartCount}` : ''}
           >
-            <img src={cartIcon} alt="cart icon" className={styles.icon} />
+            <img src={getImageUrl('/img/Shopping-cart.png')} alt="cart icon" className={styles.icon} />
           </span>
         </NavLink>
       </div>

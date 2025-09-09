@@ -4,6 +4,7 @@ import { Breadcrumbs } from '../../components/Breadcrumbs/Breadcrumbs';
 import { Card } from '../../components/Card';
 import styles from '../../components/ProductsList/ProductsList.module.scss';
 import { Product } from '../../types/Product';
+import { getImageUrl } from '../../utils/getImageUrl';
 
 export const FavouritePage: React.FC = () => {
   const { favourites } = useFavouriteValues();
@@ -38,7 +39,7 @@ export const FavouritePage: React.FC = () => {
             }}
           >
             <img
-              src="/img/product-not-found.png"
+              src={getImageUrl('/img/product-not-found.png')}
               alt="No favorites"
               style={{ maxWidth: '320px', marginBottom: '24px' }}
             />
