@@ -7,6 +7,7 @@ import { useValues } from '../../store/ProductContext';
 import { SortOptions } from '../../types/SortOptions';
 import { Loader } from '../Loader';
 import classNames from 'classnames';
+import { getImageUrl } from '../../utils/getImageUrl';
 
 import { Card } from '../Card';
 import { Pagination } from '../Pagination/Pagination';
@@ -81,7 +82,7 @@ const Dropdown: React.FC<DropdownProps> = ({
       >
         <span className={styles.dropdownValue}>{currentOption}</span>
         <img
-          src={isOpen ? '/img/arrow-up.png' : '/img/arrow-down.png'}
+          src={isOpen ? getImageUrl('/img/arrow-up.png') : getImageUrl('/img/arrow-down.png')}
           alt="arrow"
           className={styles.dropdownIcon}
         />

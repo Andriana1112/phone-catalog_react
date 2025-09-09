@@ -1,7 +1,5 @@
 @import '../../styles/common';
 
-$base-url: 'https://andriana1112.github.io/phone-catalog_react';
-
 .selectionDropdown {
   margin-top: 40px;
   position: relative;
@@ -32,7 +30,7 @@ $base-url: 'https://andriana1112.github.io/phone-catalog_react';
     &--icon {
       width: 16px;
       height: 16px;
-      background-image: url('#{$base-url}/img/arrow-down.png');
+      background-image: url('https://andriana1112.github.io/phone-catalog_react/img/arrow-down.png');
       background-position: center;
       background-repeat: no-repeat;
     }

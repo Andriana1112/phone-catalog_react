@@ -39,7 +39,7 @@ $base-url: 'https://andriana1112.github.io/phone-catalog_react';
       margin: auto 0;
       width: 32px;
       height: 32px;
-      background-image: url('#{$base-url}/img/delete.svg');
+      background-image: url('https://andriana1112.github.io/phone-catalog_react/img/delete.svg');
       background-repeat: no-repeat;
       background-position: center;
       background-size: 16px 16px;
@@ -50,7 +50,7 @@ $base-url: 'https://andriana1112.github.io/phone-catalog_react';
 
       &:hover,
       &:active {
-        background-image: url('#{$base-url}/img/close_def.svg');
+        background-image: url('https://andriana1112.github.io/phone-catalog_react/img/close_def.svg');
         border: none !important;
       }
     }
@@ -115,7 +115,7 @@ $base-url: 'https://andriana1112.github.io/phone-catalog_react';
 }
 
 .card__increaseQuantity {
-  background-image: url('#{$base-url}/img/IncreaseQuantity.png');
+  background-image: url('https://andriana1112.github.io/phone-catalog_react/img/IncreaseQuantity.png');
 
   &:hover,
   &:active {
@@ -124,7 +124,7 @@ $base-url: 'https://andriana1112.github.io/phone-catalog_react';
 }
 
 .card__decreaseQuantity {
-  background-image: url('#{$base-url}/img/decreaseQuantity.png');
+  background-image: url('https://andriana1112.github.io/phone-catalog_react/img/decreaseQuantity.png');
 
   &--disabled {
     pointer-events: none;
@@ -138,7 +138,7 @@ $base-url: 'https://andriana1112.github.io/phone-catalog_react';
 
   &--active,
   &:hover:not(.card__decreaseQuantity--disabled) {
-    background-image: url('#{$base-url}/img/decreaseQuantity_active.png');
+    background-image: url('https://andriana1112.github.io/phone-catalog_react/img/decreaseQuantity_active.png');
   }
 }
 
