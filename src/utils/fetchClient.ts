@@ -6,11 +6,12 @@ function wait(delay: number) {
 
 function request<T>(url: string, method: string): Promise<T> {
   const options: RequestInit = { method };
-  
+
   // Fix URL for GitHub Pages deployment
-  const baseUrl = process.env.NODE_ENV === 'production' 
-    ? 'https://andriana1112.github.io/phone-catalog_react' 
-    : '';
+  const baseUrl =
+    process.env.NODE_ENV === 'production'
+      ? 'https://andriana1112.github.io/phone-catalog_react'
+      : '';
   const fullUrl = baseUrl + url;
 
   return wait(500)

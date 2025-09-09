@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { getImageUrl } from '../../utils/getImageUrl';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -15,7 +16,7 @@ export const Footer: React.FC = () => {
         <footer className="footer">
           <Link to="/" className="footer__logo">
             <img
-              src="/img/Logo.png"
+              src={getImageUrl("/img/Logo.png")}
               alt="Logo"
               className="footer__logo--pict"
             />
@@ -42,7 +43,7 @@ export const Footer: React.FC = () => {
               onClick={scrollToTop}
               aria-label="Back to top"
             >
-              <img src="/img/arrowRight-Default.png" alt="Back to top" />
+              <img src={getImageUrl("/img/arrowRight-Default.png")} alt="Back to top" />
             </button>
           </div>
         </footer>

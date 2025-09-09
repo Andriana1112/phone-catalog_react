@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Breadcrumbs.module.scss';
+import { getImageUrl } from '../../utils/getImageUrl';
 
 interface Breadcrumb {
   label: string;
@@ -22,12 +23,12 @@ export const Breadcrumbs: React.FC<Props> = ({ items, className = '' }) => {
               className={styles.breadcrumbs__home}
               aria-label="Home"
             >
-              <img src="/img/Home.png" alt="Home" />
+              <img src={getImageUrl("/img/Home.png")} alt="Home" />
             </a>
           ) : (
             <>
               <img
-                src="/img/btn-next.png"
+                src={getImageUrl("/img/btn-next.png")}
                 alt="Next"
                 className={styles.breadcrumbs__arrow}
               />

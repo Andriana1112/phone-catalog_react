@@ -4,6 +4,7 @@ import phones from '../../api/phones.json';
 import tablets from '../../api/tablets.json';
 import accessories from '../../api/accessories.json';
 import React from 'react';
+import { getImageUrl } from '../../utils/getImageUrl';
 
 export const ShopCategory: React.FC = () => {
   return (
@@ -14,7 +15,7 @@ export const ShopCategory: React.FC = () => {
           <div className="shop_category__box--card phones-bg">
             <a href="/phones" className="shop_category__card--img-link">
               <img
-                src="/img/category-phones.webp"
+                src={getImageUrl("/img/category-phones.webp")}
                 alt="Mobile phones"
                 className="shop_category__card--img"
               />
@@ -32,7 +33,7 @@ export const ShopCategory: React.FC = () => {
           <div className="shop_category__box--card tablets-bg">
             <a href="/tablets" className="shop_category__card--img-link">
               <img
-                src="/img/category-tablets.webp"
+                src={getImageUrl("/img/category-tablets.webp")}
                 alt="Tablets"
                 className="shop_category__card--img"
               />
@@ -50,7 +51,7 @@ export const ShopCategory: React.FC = () => {
           <div className="shop_category__box--card accessories-bg">
             <a href="/accessories" className="shop_category__card--img-link">
               <img
-                src="/img/category-accessories.webp"
+                src={getImageUrl("/img/category-accessories.webp")}
                 alt="Accessories"
                 className="shop_category__card--img"
               />

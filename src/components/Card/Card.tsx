@@ -29,11 +29,15 @@ export const Card: React.FC<Props> = ({ product }) => {
       (item.product.itemId || item.product.id) === productItemId,
   );
 
+  const baseUrl = process.env.NODE_ENV === 'production' 
+    ? 'https://andriana1112.github.io/phone-catalog_react' 
+    : '';
+  
   const imageSrc = product.image
-    ? `/${product.image}`
+    ? `${baseUrl}/${product.image}`
     : product.images && product.images.length > 0
-      ? `/${product.images[0]}`
-      : '/img/page-not-found.png';
+      ? `${baseUrl}/${product.images[0]}`
+      : `${baseUrl}/img/page-not-found.png`;
 
   const price = product.price ?? product.priceDiscount ?? '';
   const fullPrice = product.fullPrice ?? product.priceRegular ?? '';
@@ -98,7 +102,7 @@ export const Card: React.FC<Props> = ({ product }) => {
             onClick={() => removeFromFavourite(product)}
           >
             <img
-              src="/img/favourite-icon-selected.png"
+              src={`${baseUrl}/img/favourite-icon-selected.png`}
               alt="favourite icon"
               className="icon icon-user favourite__added"
             />
@@ -110,7 +114,7 @@ export const Card: React.FC<Props> = ({ product }) => {
             onClick={() => addToFavourite(product)}
           >
             <img
-              src="/img/favourite-icon.png"
+              src={`${baseUrl}/img/favourite-icon.png`}
               alt="favourite icon"
               className="icon icon-user"
             />

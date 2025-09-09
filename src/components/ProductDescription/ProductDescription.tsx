@@ -10,6 +10,7 @@ import { useCartValues } from '../../store/CartStore';
 import { useFavouriteValues } from '../../store/FavouriteContext';
 import { GoBackBttn } from '../GoBackBttn';
 import classNames from 'classnames';
+import { getImageUrl } from '../../utils/getImageUrl';
 import { COLOR_TO_SELECT } from '../../types/ChooseColor';
 
 type Props = {
@@ -116,11 +117,15 @@ export const ProductDescription: React.FC<Props> = ({
     </ul>
   );
 
+  const baseUrl = process.env.NODE_ENV === 'production' 
+    ? 'https://andriana1112.github.io/phone-catalog_react' 
+    : '';
+    
   const imageSrc = selectedProduct?.image
-    ? `/${selectedProduct.image}`
+    ? `${baseUrl}/${selectedProduct.image}`
     : selectedImage
-      ? `/${selectedImage}`
-      : '/img/page-not-found.png';
+      ? `${baseUrl}/${selectedImage}`
+      : `${baseUrl}/img/page-not-found.png`;
 
   const shortSpecs: SpecItem[] = [
     { name: 'Screen', value: screen },
@@ -169,7 +174,7 @@ export const ProductDescription: React.FC<Props> = ({
                     )}
                   >
                     <img
-                      src={`/${image}`}
+                      src={`${baseUrl}/${image}`}
                       alt={selectedProduct.id}
                       className="product-description__miniature-image"
                     />
@@ -278,7 +283,7 @@ export const ProductDescription: React.FC<Props> = ({
                 >
                   <div className="icon-wrapper">
                     <img
-                      src="/img/favourite-icon-selected.png"
+                      src={getImageUrl("/img/favourite-icon-selected.png")}
                       alt="favourite icon"
                       className="icon icon-user favourite__added"
                     />
@@ -296,7 +301,7 @@ export const ProductDescription: React.FC<Props> = ({
                 >
                   <div className="icon-wrapper">
                     <img
-                      src="/img/favourite-icon.png"
+                      src={getImageUrl("/img/favourite-icon.png")}
                       alt="favourite icon"
                       className="icon icon-user"
                     />
