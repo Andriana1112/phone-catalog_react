@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Breadcrumbs.module.scss';
 import { getImageUrl } from '../../utils/getImageUrl';
 
@@ -18,13 +19,13 @@ export const Breadcrumbs: React.FC<Props> = ({ items, className = '' }) => {
       {items.map((item, idx) => (
         <React.Fragment key={item.label}>
           {idx === 0 ? (
-            <a
-              href={item.href}
+            <Link
+              to={item.href || '/'}
               className={styles.breadcrumbs__home}
               aria-label="Home"
             >
               <img src={getImageUrl('/img/Home.png')} alt="Home" />
-            </a>
+            </Link>
           ) : (
             <>
               <img
@@ -33,9 +34,9 @@ export const Breadcrumbs: React.FC<Props> = ({ items, className = '' }) => {
                 className={styles.breadcrumbs__arrow}
               />
               {item.href ? (
-                <a href={item.href} className={styles.breadcrumbs__route}>
+                <Link to={item.href} className={styles.breadcrumbs__route}>
                   {item.label}
-                </a>
+                </Link>
               ) : (
                 <span
                   className={`${styles.breadcrumbs__route} ${styles['breadcrumbs__route--last']}`}

@@ -82,7 +82,11 @@ const Dropdown: React.FC<DropdownProps> = ({
       >
         <span className={styles.dropdownValue}>{currentOption}</span>
         <img
-          src={isOpen ? getImageUrl('/img/arrow-up.png') : getImageUrl('/img/arrow-down.png')}
+          src={
+            isOpen
+              ? getImageUrl('/img/arrow-up.png')
+              : getImageUrl('/img/arrow-down.png')
+          }
           alt="arrow"
           className={styles.dropdownIcon}
         />
