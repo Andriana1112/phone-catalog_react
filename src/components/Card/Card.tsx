@@ -29,9 +29,10 @@ export const Card: React.FC<Props> = ({ product }) => {
       (item.product.itemId || item.product.id) === productItemId,
   );
 
-  const baseUrl = process.env.NODE_ENV === 'production'
-    ? 'https://andriana1112.github.io/phone-catalog_react'
-    : '';
+  const baseUrl =
+    process.env.NODE_ENV === 'production'
+      ? 'https://andriana1112.github.io/phone-catalog_react'
+      : '';
 
   const imageSrc = product.image
     ? `${baseUrl}/${product.image}`

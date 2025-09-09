@@ -117,9 +117,10 @@ export const ProductDescription: React.FC<Props> = ({
     </ul>
   );
 
-  const baseUrl = process.env.NODE_ENV === 'production'
-    ? 'https://andriana1112.github.io/phone-catalog_react'
-    : '';
+  const baseUrl =
+    process.env.NODE_ENV === 'production'
+      ? 'https://andriana1112.github.io/phone-catalog_react'
+      : '';
 
   const imageSrc = selectedProduct?.image
     ? `${baseUrl}/${selectedProduct.image}`
@@ -283,7 +284,7 @@ export const ProductDescription: React.FC<Props> = ({
                 >
                   <div className="icon-wrapper">
                     <img
-                      src={getImageUrl("/img/favourite-icon-selected.png")}
+                      src={getImageUrl('/img/favourite-icon-selected.png')}
                       alt="favourite icon"
                       className="icon icon-user favourite__added"
                     />
@@ -301,7 +302,7 @@ export const ProductDescription: React.FC<Props> = ({
                 >
                   <div className="icon-wrapper">
                     <img
-                      src={getImageUrl("/img/favourite-icon.png")}
+                      src={getImageUrl('/img/favourite-icon.png')}
                       alt="favourite icon"
                       className="icon icon-user"
                     />

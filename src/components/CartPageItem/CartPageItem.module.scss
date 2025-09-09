@@ -1,5 +1,7 @@
 @import '../../styles/common';
 
+$base-url: 'https://andriana1112.github.io/phone-catalog_react';
+
 .cartPageItem {
   display: flex;
   flex-direction: column;
@@ -37,7 +39,7 @@
       margin: auto 0;
       width: 32px;
       height: 32px;
-      background-image: url('/img/delete.svg');
+      background-image: url('#{$base-url}/img/delete.svg');
       background-repeat: no-repeat;
       background-position: center;
       background-size: 16px 16px;
@@ -48,7 +50,7 @@
 
       &:hover,
       &:active {
-        background-image: url('/img/close_def.svg');
+        background-image: url('#{$base-url}/img/close_def.svg');
         border: none !important;
       }
     }
@@ -113,7 +115,7 @@
 }
 
 .card__increaseQuantity {
-  background-image: url('/img/IncreaseQuantity.png');
+  background-image: url('#{$base-url}/img/IncreaseQuantity.png');
 
   &:hover,
   &:active {
@@ -122,7 +124,7 @@
 }
 
 .card__decreaseQuantity {
-  background-image: url('/img/decreaseQuantity.png');
+  background-image: url('#{$base-url}/img/decreaseQuantity.png');
 
   &--disabled {
     pointer-events: none;
@@ -136,7 +138,7 @@
 
   &--active,
   &:hover:not(.card__decreaseQuantity--disabled) {
-    background-image: url('/img/decreaseQuantity_active.png');
+    background-image: url('#{$base-url}/img/decreaseQuantity_active.png');
   }
 }
 
