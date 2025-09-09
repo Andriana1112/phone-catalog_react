@@ -7,9 +7,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 const images = [
-  '/img/hero_iphone16pro_small.jpg',
-  '/img/iphone16Pro(3).jpg',
-  '/img/iphone16proIMG.jpg',
+  `${process.env.NODE_ENV === 'production' ? 'https://andriana1112.github.io/phone-catalog_react' : ''}/img/hero_iphone16pro_small.jpg`,
+  `${process.env.NODE_ENV === 'production' ? 'https://andriana1112.github.io/phone-catalog_react' : ''}/img/iphone16Pro(3).jpg`,
+  `${process.env.NODE_ENV === 'production' ? 'https://andriana1112.github.io/phone-catalog_react' : ''}/img/iphone16proIMG.jpg`,
 ];
 
 export const Banner: React.FC = () => {
@@ -33,7 +33,7 @@ export const Banner: React.FC = () => {
             type="button"
           >
             <img
-              src="/img/btn-prev.png"
+              src={`${process.env.NODE_ENV === 'production' ? 'https://andriana1112.github.io/phone-catalog_react' : ''}/img/btn-prev.png`}
               alt="prev"
               className="banner__slider__btn-img"
             />
@@ -80,7 +80,7 @@ export const Banner: React.FC = () => {
             type="button"
           >
             <img
-              src="/img/btn-next.png"
+              src={`${process.env.NODE_ENV === 'production' ? 'https://andriana1112.github.io/phone-catalog_react' : ''}/img/btn-next.png`}
               alt="next"
               className="banner__slider__btn-img"
             />
